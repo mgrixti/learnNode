@@ -6,6 +6,12 @@ var app = express();
 // Port express listens on for request
 var port = 8000;
 
+// Static directory
+app.use(express.static('public'));
+app.use(express.static('src/views'));
+
+
+
 // Route Example
 app.get('/', function(req, res){
     res.send("hello world");
